@@ -47,13 +47,13 @@ async function getOllamaTotal() {
 
     // Convert back to the most appropriate unit with one decimal place
     if (totalBytes >= 1000000000000) {
-      return `${(totalBytes / 1000000000000).toFixed(1)} TB`;
+      return `Total Ollama models' size: ${(totalBytes / 1000000000000).toFixed(1)} TB`;
     } else if (totalBytes >= 1000000000) {
-      return `${(totalBytes / 1000000000).toFixed(1)} GB`;
+      return `Total Ollama models' size: ${(totalBytes / 1000000000).toFixed(1)} GB`;
     } else if (totalBytes >= 1000000) {
-      return `${(totalBytes / 1000000).toFixed(1)} MB`;
+      return `Total Ollama models' size: ${(totalBytes / 1000000).toFixed(1)} MB`;
     } else {
-      return `${totalBytes} B`;
+      return `Total Ollama models' size: ${totalBytes} B`;
     }
   } catch (error) {
     return `Error: ${error.message}`;
